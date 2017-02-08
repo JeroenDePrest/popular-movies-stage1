@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">popular-movies-stage1</string>
+    <string name="error_message">Problem with loading the data</string>
+    <string name="title">Title:</string>
+    <string name="overview">Overview:</string>
+    <string name="vote">Vote:</string>
+    <string name="realease">Release date:</string>
+    <string name="toggle_sort">Toggle sort</string>
+    <string name="popularity">Most popular movies</string>
+    <string name="rating">Highest rated movies</string>
+</resources>
