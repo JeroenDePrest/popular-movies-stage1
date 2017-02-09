@@ -8,4 +8,5 @@
     <string name="toggle_sort">Toggle sort</string>
     <string name="popularity">Most popular movies</string>
     <string name="rating">Highest rated movies</string>
+    <string name="noData">Null</string>
 </resources>

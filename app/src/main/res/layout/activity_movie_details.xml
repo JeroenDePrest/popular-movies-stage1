@@ -31,7 +31,8 @@
     <TextView
         android:id="@+id/tv_movie_title_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/noData" />
 
     <TextView
         android:id="@+id/tv_movie_overview"
@@ -42,7 +43,8 @@
     <TextView
         android:id="@+id/tv_movie_overview_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/noData" />
 
     <TextView
         android:id="@+id/tv_movie_release"
@@ -53,7 +55,8 @@
     <TextView
         android:id="@+id/tv_movie_release_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/noData" />
     <TextView
         android:id="@+id/tv_movie_vote"
         android:textSize="24sp"
@@ -63,7 +66,8 @@
     <TextView
         android:id="@+id/tv_movie_vote_text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/noData" />
 
 </LinearLayout>
     </ScrollView>

@@ -1,7 +1,8 @@
 package be.jeroendeprest.popular_movies_stage1;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,23 +26,35 @@ public class MovieDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
 
-        movie = getIntent().getParcelableExtra("movie");
-        setTitle(movie.getTitle());
+        // You can be pretty confident that the intent will not be null here.
+        Intent intent = getIntent();
 
-        mPoster = (ImageView) findViewById(R.id.iv_movie_poster_detail);
-        Picasso.with(this).load("http://image.tmdb.org/t/p/w500/"+movie.getPosterPath()).into(mPoster);
+        // Get the extras (if there are any)
+        Bundle extras = intent.getExtras();
+        if (extras != null) {
+            if (extras.containsKey("movie")) {
+                movie = getIntent().getParcelableExtra("movie");
+                setTitle(movie.getTitle());
 
-        mTitle = (TextView) findViewById(R.id.tv_movie_title_text);
-        mTitle.setText(movie.getTitle());
+                mPoster = (ImageView) findViewById(R.id.iv_movie_poster_detail);
+                Picasso.with(this).load("http://image.tmdb.org/t/p/w500/" + movie.getPosterPath()).into(mPoster);
 
-        mOverview = (TextView) findViewById(R.id.tv_movie_overview_text);
-        mOverview.setText(movie.getOverview());
+                mTitle = (TextView) findViewById(R.id.tv_movie_title_text);
+                mTitle.setText(movie.getTitle());
 
-        mRelease = (TextView) findViewById(R.id.tv_movie_release_text);
-        mRelease.setText(movie.getReleaseDate());
+                mOverview = (TextView) findViewById(R.id.tv_movie_overview_text);
+                mOverview.setText(movie.getOverview());
 
-        mVote = (TextView) findViewById(R.id.tv_movie_vote_text);
-        mVote.setText(movie.getVoteAverage()+" /10");
+                mRelease = (TextView) findViewById(R.id.tv_movie_release_text);
+                mRelease.setText(movie.getReleaseDate());
+
+                mVote = (TextView) findViewById(R.id.tv_movie_vote_text);
+                mVote.setText(movie.getVoteAverage() + " /10");
+            }
+        }
+
+
+
 
     }
 }
